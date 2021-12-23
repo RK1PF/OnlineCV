@@ -1,7 +1,42 @@
 {
-    "Formations" :[
-    {
-        "School":"e",
-    }
-]
+    "Formations": [
+        {
+            "school": "Ecole Poly3D",
+            "years": "2015-2016",
+            "description": "Ecole de Conception de Jeux Vidéos"
+        },
+        {
+            "school": "Université de Polynésie Française",
+            "years": "2019-2020 ",
+            "description": "Diplôme d'accès aux études universitaires"
+        },
+        {
+            "school": "AFPA de Brest",
+            "years": "2021-2022",
+            "description": "Dev Web & Web mobile"
+        }
+    ],
+    "Experiences":[
+        {
+            "entreprise": "ASSISTANCE AMBULANCE | STAGE DEV WEB",
+            "description": "Découverte du métier de développeur web, création d' un site web pour la gestion des transports.Mise en place du frontend & du backend.",
+            "years":"2020"
+        },
+        {
+            "entreprise": "ASSISTANCE AMBULANCE | STAGE DEV WEB",
+            "description": "Découverte du métier de développeur web, création d' un site web pour la gestion des transports.Mise en place du frontend & du backend.",
+            "years": "2020-2016"
+        },
+        {
+            "entreprise": "BE LOCAL | GERANT GRAPHISTE COMMERCIAL",
+            "description": "Création des graphiques pour les productions des textiles. Édition des photos éditoriales les publications sur les réseaux sociaux.Organisation des commandes et des livraisons.",
+            "years": "2020-2016"
+        },
+        {
+            "entreprise": "VAIHEI ASSISTANCE | GESTION DE FACTURATION",
+            "description": "Mise en place et gestion d'un système semi-automatisé de facturation.Chargé de mettre à jour les données mensuel essentiel pour le logiciel.",
+            "years": "2016"
+        }
+
+    ]
 }
