@@ -35,7 +35,9 @@ html {
   background-color: var(--clr-main);
   color: var(--clr-light);
   box-shadow: #21393b 5px 0px 15px;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-rl;
+  /* text-orientation: upright; */
+  transform: rotate(180deg);
   display: flex;
   align-items: center;
   justify-content: flex-end;
