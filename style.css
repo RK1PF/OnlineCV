@@ -57,9 +57,13 @@ html {
   overflow-y: auto;
   /* box-shadow: #21393b 5px 0px 15px; */
 }
-#dotsOut{
+.section h2{
+  margin-top: 0;
+  margin-bottom: 1em;
 }
-.section{
+#dotsOut {
+}
+.section {
   width: 100%;
   height: 90%;
 }
@@ -69,7 +73,7 @@ html {
 .title {
   margin-top: 0.5em;
 }
-.head{
+.head {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -89,7 +93,6 @@ footer {
 .accent-color {
   color: var(--clr-accent);
 }
-
 .pt-1 {
   padding-top: 1em;
 }
@@ -111,14 +114,14 @@ footer {
 .tac {
   text-align: center;
 }
-.tar{
+.tar {
   text-align: right;
 }
 /* slides */
 
 .mySlides {
-    display: none;
-  }
+  display: none;
+}
 .dot {
   cursor: pointer;
   height: 2em;
@@ -142,7 +145,6 @@ footer {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {
     opacity: 0.4;
@@ -151,13 +153,34 @@ footer {
     opacity: 1;
   }
 }
-
 @keyframes fade {
   from {
     opacity: 0.4;
   }
   to {
     opacity: 1;
+  }
+}
+.bgfade {
+  -webkit-animation-name: bgfade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: bgfade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes bgfade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@keyframes bgfade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.4;
   }
 }
 /* scrollbar */
@@ -172,4 +195,33 @@ footer {
 #content::-webkit-scrollbar-thumb {
   background-color: #dfdfdf;
   border-radius: 10px;
+}
+/* background */
+
+.bg-1 {
+  background-image: url(./images/1.jpg);
+}
+.bg-2 {
+  background-image: url(./images/2.jpg);
+}
+.bg-3 {
+  background-image: url(./images/4.jpg);
+}
+.bg {
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: center;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -webkit-mask: linear-gradient(#fff, transparent);
+  mask: linear-gradient(#fff, transparent);
+  -webkit-mask: linear-gradient(#fff, transparent);
 }

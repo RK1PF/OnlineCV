@@ -1,4 +1,9 @@
 const data = {
+  Titles: [
+    "Introduction",
+    "Formations",
+    "Expériences"
+  ],
   Introduction: {
     title: "SÉRIEUX, RIGOUREUX ET AMBITIEUX",
     description:
@@ -47,6 +52,9 @@ const dostout = document.getElementById("dotsOut");
 const elementsCreated = [];
 // loop in the json
 Object.keys(data).forEach((keys) => {
+  if (keys == "Titles") {
+    return console.log("titles");
+  }
   const section = document.createElement("div");
   section.classList.add("section");
   section.classList.add("mySlides");
@@ -67,8 +75,11 @@ elementsCreated.forEach((e) => {
 // FUNCTIONS
 function intro(keys, section) {
   if (keys == "Introduction") {
+    const sectionTitle = document.createElement("h2");
     const title = document.createElement("h3");
     const desc = document.createElement("p");
+    sectionTitle.textContent = data.Titles[0];
+    section.appendChild(sectionTitle);
     title.textContent = data.Introduction.title;
     desc.textContent = data.Introduction.description;
     section.appendChild(title);
@@ -77,6 +88,11 @@ function intro(keys, section) {
 }
 function formation(keys, section) {
   if (keys == "Formations") {
+    // Titre de la section
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.textContent = data.Titles[1];
+    section.appendChild(sectionTitle);
+    //loop trough data
     data.Formations.forEach(e => {
     const title = document.createElement("h3");
     const years = document.createElement("h4");
@@ -96,6 +112,9 @@ function formation(keys, section) {
 }
 function experience(keys, section) {
   if (keys == "Experiences") {
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.textContent = data.Titles[2];
+    section.appendChild(sectionTitle);
     data.Experiences.forEach(e => {
     const title = document.createElement("h3");
     const years = document.createElement("h4");
@@ -142,6 +161,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  const bg = document.getElementsByClassName("bg");
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
@@ -153,9 +173,13 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  for (i = 0; i < slides.length; i++) {
+    bg[i].style.display = "none";
+  }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  bg[slideIndex - 1].style.display = "block";
 }
